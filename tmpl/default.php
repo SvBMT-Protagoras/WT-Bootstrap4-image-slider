@@ -1,6 +1,6 @@
 <?php
 /*
- * @version		mod_wt_boostrap4_slider.php 1.0.1
+ * @version		mod_wt_boostrap4_slider.php 1.0.2
  * @package		Bootstrap 4 image slider for Joomla
  * @copyright   Copyright (C) 2020 Sergey Tolkachyov
  * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,8 +34,7 @@ defined('_JEXEC') or die('Restricted access');
   <div class="carousel-inner">
 	   <?php 
 	   $k=0;
-	   foreach($params->get("fields") as $field):
-		  ?>
+	   foreach($params->get("fields") as $field):?>
 		   <div class="carousel-item <?php if($k+1 == 1) {echo "active";} ?>" <?php 
 		   if($params->get("use_individual_time_interval") == 1){
 			   echo "data-interval=\"".($field->individual_time_interval*1000)."\"";}?>>
@@ -56,7 +55,10 @@ defined('_JEXEC') or die('Restricted access');
 					
 					
 				  </div>
-			  <?php $k++; endif;?>
+			  <?php
+			 endif;
+			 $k++;
+			  ?>
 			</div>
 	  <?php endforeach;?>
 	  <?php if ($use_controls == 1):?>
