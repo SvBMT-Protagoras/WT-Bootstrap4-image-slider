@@ -11,10 +11,11 @@ $doc = JFactory::getDocument();
 
 $moduleId = $module->id;
 $fields = $params->get('fields');
-		$use_individual_time_interval = $params->get('use_individual_time_interval');
-		$time_interval = $params->get('time_interval')*1000;
-		$use_controls = $params->get('use_controls');
-		$crossfade = $params->get('crossfade');
+$show_many_move_one = $params->get('show_many_move_one');
+$use_individual_time_interval = $params->get('use_individual_time_interval');
+$time_interval = $params->get('time_interval')*1000;
+$use_controls = $params->get('use_controls');
+$crossfade = $params->get('crossfade');
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 
